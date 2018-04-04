@@ -3,10 +3,10 @@
     <a class="nv-brand logo-right" href="javascript:void(0)"><i class="mdi-image-timelapse"></i>Pluto</a>
   </div> -->
   <ul style="padding-top: 60px;">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#testimonial">Testimonial</a></li>
-        <li><a href="#screenshot">Screenshots</a></li>
-        <li><a href="#contact-us">contact us</a></li>
+        <li><a [routerLink]="['/']">Home</a></li>
+        <li><a [routerLink]="['/Testimonial']">Testimonial</a></li>
+        <li><a [routerLink]="['/Screenshots']">Screenshots</a></li>
+        <li><a [routerLink]="['/contact']">contact us</a></li>
         <li><a [routerLink]="['/login']">Login</a></li>
   </ul>
  <button class="close-button"(click)="closeBtnClicked()">Close Menu</button>

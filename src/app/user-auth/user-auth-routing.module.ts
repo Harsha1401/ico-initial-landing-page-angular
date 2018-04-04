@@ -6,18 +6,20 @@ import {AuthGaurd} from "../auth-guards/auth.gaurds";
 //import {RegisterComponent} from "./register/register.component";
 import {LandingPageComponent} from "./landing-page/landing-page.component";
 import { LoginComponent } from "./login/login.component";
+import { RegisterUserComponent } from "./register-user/register-user.component";
 //import {CompleteIcoComponent} from "./complete-ico/complete-ico.component";
 
 const routes: Routes = [
   {
     path: RouteConstants.LOGIN,
-    component: LoginComponent
+    component: LoginComponent,
+    canActivate: [AuthGaurd]
   },
-  // {
-  //   path: RouteConstants.REGISTERATION,
-  //   component: RegisterComponent,
-  //   canActivate: [AuthGaurd]
-  // },
+  {
+    path: RouteConstants.REGISTERATION,
+    component: RegisterUserComponent,
+    canActivate: [AuthGaurd]
+  },
   {
     path: "",
     component: LandingPageComponent,

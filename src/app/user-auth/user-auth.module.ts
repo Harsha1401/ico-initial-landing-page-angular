@@ -21,6 +21,7 @@ import { ContactUsComponent } from "./contact-us/contact-us.component";
 import { HeaderNavbarComponent } from "./header-navbar/header-navbar.component";
 import { LoginComponent } from './login/login.component';
 import { SharedService } from "../utility/shared-service/shared-service";
+import { RegisterUserComponent } from './register-user/register-user.component';
 //import { CompleteIcoComponent } from './complete-ico/complete-ico.component';
 //import { ImageUploadComponent } from './image-upload/image-upload.component';
 
@@ -53,7 +54,8 @@ import { SharedService } from "../utility/shared-service/shared-service";
     ContentDisplayComponent,
     ContactUsComponent,
     HeaderNavbarComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterUserComponent
   ],
   providers: [
     //UserAuthService,
@@ -61,6 +63,10 @@ import { SharedService } from "../utility/shared-service/shared-service";
   ],
   exports: [
     LoginComponent,
+    HeaderComponent,
+    HeaderNavbarComponent,
+    FooterComponent,
+    RegisterUserComponent
    // RegisterComponent
   ]
 })

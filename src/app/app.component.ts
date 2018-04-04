@@ -12,7 +12,7 @@ import { HeaderComponent } from '../app/user-auth/header/header.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(router:Router,private sharedService:SharedService,) {
+  constructor(router:Router,private sharedService:SharedService) {
     router.events.subscribe((event) => {
       this.sharedService.closeSideBar();
     });

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { NavigationComponent } from '../navigation/navigation.component';
 import {trigger, state, style, transition, animate} from '@angular/animations';
 import { SharedService } from '../../utility/shared-service/shared-service';
@@ -21,11 +21,11 @@ import { SharedService } from '../../utility/shared-service/shared-service';
   ]
 })
 export class HeaderNavbarComponent implements OnInit {
+  @Input() classNames:string ="navbar navbar-inverse sticky-navigation navbar-fixed-top" ;
   menuState:string = 'out';
   constructor(private sharedService:SharedService) { 
     this.sharedService.sidebarToggleEventEmiter.subscribe(
       (data: any) => {
-        console.log(data);
        this.menuState =  data;
       });
   }
