@@ -1,7 +1,21 @@
     <app-header-navbar [classNames] ="'navbar navbar-inverse sticky-navigation'"> </app-header-navbar>
-    <div style="margin-top:3%">
-      <p>
-        login works!
-      </p>
-      <a [routerLink]="['/register']" >New User ? </a>
+    <div style="margin-top:5%">
+        <form>
+          <h3>Login</h3>
+          <input placeholder="Username" type="text" required>
+          <input placeholder="Password" type="password" required>
+          <div class="row">
+
+            <div class="col-md-6">
+                <button type="submit">Submit</button>
+            </div>
+
+            <div class="col-md-6">
+                <a [routerLink]="['/register']">New User? Register Here</a>
+            </div>
+
+          </div>
+        
+         
+        </form>
     </div>
