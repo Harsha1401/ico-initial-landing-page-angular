@@ -1,17 +1,108 @@
-<app-header-navbar [classNames] ="'navbar navbar-inverse sticky-navigation'"> </app-header-navbar>
-<div style="margin-top:5%">
-    <form>
-      <h3>Register New User</h3>
-      <input placeholder="Email" type="email" required>
-      <input placeholder="Username" type="text" required>
-      <input placeholder="Password" type="password" required>
-      <input placeholder="Confirm Password" type="password" required>
-      <div class="row">
-        <div class="col-md-6">
-            <button type="submit">Submit</button>
-        </div>
+<app-header-navbar [classNames] ="''"> </app-header-navbar>
+
+<div class="ui container login-container">
+
+  <div class="register-block">
+    <div class="register-main-block" @dialog>
+      <!-- Start Login Form -->
+      <div class="main-logo register-form-logo">
+        <img src="assets/img/logo_white.png"/>
       </div>
-    
-     
-    </form>
+
+      <div class="ui form register-form">
+        <!--Register Form Start-->
+        <div class="login-section">
+          <form [formGroup]="registerForm" (submit)="onRegister(registerForm.value,registerForm.valid,country.value)">
+            <div class="field logo">
+              <h3>{{'Registration'}}</h3>
+            </div>
+
+            <div class="margin-top-10 col-xs-12 col-md-6">
+              <input type="text" placeholder="{{'First Name'}}"   class="form-control" formControlName="firstName" required/>
+              <div class="input-validation-msg">
+                <validation *ngIf="isRequiredField(registerForm.get('firstName'))" [errMsg]="'Firstname is Required'"></validation>
+                <validation *ngIf="isValidLength(registerForm.get('firstName'))" [errMsg]="'Minimum Firstname length is 3 Characters'"></validation>
+              </div>
+            </div>
+
+            <div class="margin-top-10 col-xs-12 col-md-6">
+              <input type="text" placeholder="{{'Last Name'}}"   class="form-control" formControlName="lastName" required/>
+              <div class="input-validation-msg">
+                <validation *ngIf="isRequiredField(registerForm.get('lastName'))" [errMsg]="'Last Name Required'"></validation>
+                <validation *ngIf="isValidLength(registerForm.get('lastName'))" [errMsg]="'Minimum Lastname Length is 2 Characters'"></validation>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+
+            <div class="margin-top-10 col-xs-12 col-md-12">
+              <input type="text" placeholder="{{'Email'}}" class="form-control" formControlName="email" required/>
+              <div class="input-validation-msg">
+                <validation *ngIf="isRequiredField(registerForm.get('email'))" [errMsg]="'Email Required'"></validation>
+                <validation *ngIf="isValidField(registerForm.get('email'))" [errMsg]="'Invalid Email'"></validation>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+
+            <div class="margin-top-10 col-xs-12 col-md-6">
+              <input type="password" placeholder="{{'Password'}}"   class="form-control" formControlName="password" required/>
+              <div class="input-validation-msg">
+                <validation *ngIf="isRequiredField(registerForm.get('password'))" [errMsg]="'Password Required'"></validation>
+                <validation *ngIf="isValidField(registerForm.get('password'))" [errMsg]="'Invalid Password'"></validation>
+                <validation *ngIf="isValidLength(registerForm.get('password'))" [errMsg]="'Mininum Password Length is 8'"></validation>
+              </div>
+            </div>
+
+            <div class="margin-top-10 col-xs-12 col-md-6">
+              <input type="password" placeholder="{{'Confirm Password'}}"   class="form-control" formControlName="confirmPassword" required/>
+              <div class="input-validation-msg">
+                <validation *ngIf="isRequiredField(registerForm.get('confirmPassword'))" [errMsg]="'Confirm Password Required'"></validation>
+                <validation *ngIf="hasError('repeatPassword',registerForm,registerForm.get('confirmPassword'))" [errMsg]="'Confirm Password Not Matched'"></validation>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+
+            <!-- <div class="margin-top-10 col-md-12 col-xs-12 validation-small">
+              <div class="col-md-3 col-xs-4 xs-PR0 padding-left-0 padding-right-0">
+                <app-country-code (changeCountry)="onCountryChangeEvent($event)"  ></app-country-code>
+              </div>
+
+              <div class="col-md-9 col-xs-8 padding-right-0">
+                <input type="text" placeholder="{{'mobileNumber'}}" pTooltip="{{'mobileNumber'}}"  class="form-control" formControlName="telephoneNumber" required/>
+                <div class="input-validation-msg">
+                  <validation *ngIf="isRequiredField(registerForm.get('telephoneNumber'))" [errMsg]="'phoneNumberRqrd'"></validation>
+                </div>
+              </div>
+            </div> -->
+            <div class="clearfix"></div>
+
+            <div class="margin-top-10 col-md-6">
+              <div>
+                <input id="country" formControlName="country" autocomplete="off" #country type="text" placeholder="{{'Country'}}"   class="form-control"/>
+                <input type="hidden" id="country_code"/>
+              </div>
+            </div>
+
+            <!-- <div class="margin-top-10 col-md-6">
+              <input type="text" placeholder="{{'referralCode'}} {{'optional'}}" pTooltip="{{'referralCode'}} {{'optional'}}"  class="form-control" formControlName="referralCode"/>
+              <div class="input-validation-msg">
+                <validation *ngIf="isValidLength(registerForm.get('referralCode'))" [errMsg]="'referralCodeLenth'"></validation>
+              </div>
+            </div> -->
+            <div class="clearfix"></div>
+
+            <div class="margin-top-10 col-md-12">
+              <button type="submit" class="btn-primary btn btn-block" [disabled]="!registerForm.valid" >{{'Create Account'}}</button>
+
+              <div class="text-center whiteClr margin-top-10">
+                <span>{{'Already Having Account'}} <a [routerLink]="['/login']"   >{{'Login'}}</a></span>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+
+          </form>
+        </div>
+        <!-- End Register Form -->
+      </div>
+    </div>
+  </div>
 </div>

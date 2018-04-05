@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AuthGaurd } from './auth-guards/auth.gaurds';
 import { UserAuthModule } from './user-auth/user-auth.module';
 import { UtilityModule } from './utility/utility.module';
-//import {ToastModule} from "ng2-toastr";
+import {ToastModule} from "ng2-toastr";
 //import {UserAuthModule} from "./user-auth/user-auth.module";
 //import {AdminModule} from "./admin/admin.module";
 
@@ -18,6 +18,7 @@ import { UtilityModule } from './utility/utility.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    ToastModule.forRoot(),
     UserAuthModule,
     UtilityModule,
     AppRoutingModule

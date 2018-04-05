@@ -22,6 +22,8 @@ import { HeaderNavbarComponent } from "./header-navbar/header-navbar.component";
 import { LoginComponent } from './login/login.component';
 import { SharedService } from "../utility/shared-service/shared-service";
 import { RegisterUserComponent } from './register-user/register-user.component';
+import { UtilityModule } from "../utility/utility.module";
+import { ToastModule } from "ng2-toastr";
 //import { CompleteIcoComponent } from './complete-ico/complete-ico.component';
 //import { ImageUploadComponent } from './image-upload/image-upload.component';
 
@@ -34,9 +36,9 @@ import { RegisterUserComponent } from './register-user/register-user.component';
     DialogModule,
     TooltipModule,
     ChartModule,
-    //UtilityModule,
+    UtilityModule,
     ReactiveFormsModule,
-    //ToastModule.forRoot(),
+    ToastModule.forRoot(),
     UserAuthRoutingModule,
   ],
   declarations: [

@@ -6,9 +6,9 @@ import {ConnectionBackend, HttpModule, RequestOptions, XHRBackend} from "@angula
 // import {HttpService} from "./http-service";
 // import {SharedService} from "./shared-service/shared.service";
  import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
-// import {ValidationComponent} from "./validation/validation.component";
+ import {ValidationComponent} from "./validation/validation.component";
 // import {APIManager} from "./shared-service/apimanager.service";
-// import {BaseComponent} from "./base-component/base.component";
+ import {BaseComponent} from "./base-component/base.component";
 // import {NoDataComponent} from "./no-data/no-data.component";
 // import {SharedObjService} from "./shared-service/shared-object.service";
 // import {CheckEmpty} from "./pipes/checkEmpty.pipe";
@@ -18,6 +18,7 @@ import {ConnectionBackend, HttpModule, RequestOptions, XHRBackend} from "@angula
 // import {LanguageSelectorComponent} from "./language-selector/language-selector.component";
  import {DropdownModule} from "primeng/primeng";
  import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+ import { SharedService } from "./shared-service/shared-service";
 // import { CountryCodeComponent } from './country-code/country-code.component';
 // import {MyAutofocusDirective} from "../admin/focus.directive";
 
@@ -38,10 +39,10 @@ import {ConnectionBackend, HttpModule, RequestOptions, XHRBackend} from "@angula
   ],
   declarations: [
    // ProgressHudComponent,
-    PageNotFoundComponent
-    // ValidationComponent,
+     PageNotFoundComponent,
+     ValidationComponent,
     // NoDataComponent,
-    // BaseComponent,
+     BaseComponent,
     // CheckEmpty,
     // TranslatePipe,
     // MyAutofocusDirective,
@@ -50,7 +51,7 @@ import {ConnectionBackend, HttpModule, RequestOptions, XHRBackend} from "@angula
   ],
   providers: [
     // APIManager,
-    // SharedService,
+     SharedService,
     // Web3Service,
     // SharedObjService,
     // TranslateService,
@@ -62,11 +63,11 @@ import {ConnectionBackend, HttpModule, RequestOptions, XHRBackend} from "@angula
   ],
   exports: [
   //  ProgressHudComponent,
-    PageNotFoundComponent,
-    // ValidationComponent,
+     PageNotFoundComponent,
+     ValidationComponent,
     // NoDataComponent,
     // CheckEmpty,
-    // BaseComponent,
+     BaseComponent,
     // TranslatePipe,
     // LanguageSelectorComponent,
     // MyAutofocusDirective,

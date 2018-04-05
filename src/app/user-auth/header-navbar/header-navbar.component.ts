@@ -21,7 +21,7 @@ import { SharedService } from '../../utility/shared-service/shared-service';
   ]
 })
 export class HeaderNavbarComponent implements OnInit {
-  @Input() classNames:string ="navbar navbar-inverse sticky-navigation navbar-fixed-top" ;
+  @Input() classNames:string ="navbar sticky-navigation navbar-fixed-top" ;
   menuState:string = 'out';
   constructor(private sharedService:SharedService) { 
     this.sharedService.sidebarToggleEventEmiter.subscribe(
