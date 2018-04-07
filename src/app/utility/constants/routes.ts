@@ -1,6 +1,13 @@
 export class RouteConstants {
   public static LOGIN = 'login';
   public static REGISTERATION = 'register';
+
+  public static FAQ = 'faq'; 
+  public static TOKEN_FOR_BUYERS = 'token-for-buyers';
+  public static FOR_PROSPECTIVE_ICO = 'for-prospective-ico';
+  public static ABOUT_US = 'about-us';
+
+
   public static COMPLETE_ICO = 'complete-ico';
   public static DASHBOARD = 'dashboard';
   public static TRANSACTION_HISTORY = 'transaction-history';

@@ -8,11 +8,27 @@ import {RouteConstants} from "../constants/routes";
 export class SharedService {
 
   @Output() sidebarToggleEventEmiter: EventEmitter<any> = new EventEmitter();
-  menuState : string = 'in';  
+  menuState : string = 'in'; 
+  private isLoading: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+  private taskCount: number = 0; 
   constructor(private router: Router) {
 
   }
  
+
+  getLoader(): Observable<boolean> {
+    return this.isLoading.asObservable();
+  }
+
+  setLoader(val: boolean): void {
+    if (val) {
+      this.taskCount += 1
+    } else {
+      this.taskCount -= 1
+      this.taskCount != 0 ? val = true : "";
+    }
+    this.isLoading.next(val);
+  }
 
   openSideBar() {
     this.menuState = 'in';

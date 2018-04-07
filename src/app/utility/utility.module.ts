@@ -2,7 +2,7 @@ import {NgModule} from "@angular/core";
 import {CommonModule} from "@angular/common";
 //import {ToastsManager} from "ng2-toastr";
 import {ConnectionBackend, HttpModule, RequestOptions, XHRBackend} from "@angular/http";
-// import {ProgressHudComponent} from "./progress-hud/progress-hud.component";
+ import {ProgressHudComponent} from "./progress-hud/progress-hud.component";
 // import {HttpService} from "./http-service";
 // import {SharedService} from "./shared-service/shared.service";
  import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
@@ -38,7 +38,7 @@ import {ConnectionBackend, HttpModule, RequestOptions, XHRBackend} from "@angula
     HttpModule
   ],
   declarations: [
-   // ProgressHudComponent,
+     ProgressHudComponent,
      PageNotFoundComponent,
      ValidationComponent,
     // NoDataComponent,
@@ -62,7 +62,7 @@ import {ConnectionBackend, HttpModule, RequestOptions, XHRBackend} from "@angula
     // }
   ],
   exports: [
-  //  ProgressHudComponent,
+     ProgressHudComponent,
      PageNotFoundComponent,
      ValidationComponent,
     // NoDataComponent,

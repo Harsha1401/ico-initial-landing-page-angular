@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router, NavigationStart } from '@angular/router';
 import { SharedService } from './utility/shared-service/shared-service';
-import { FooterComponent } from '../app/user-auth/footer/footer.component';
+import { FooterComponent } from '../app/user-auth/landing-page/footer/footer.component';
 import { HeaderComponent } from '../app/user-auth/header/header.component';
 
 
