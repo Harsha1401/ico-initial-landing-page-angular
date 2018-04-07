@@ -20,7 +20,7 @@
 
             <div class="two fields margin-top-10">
               <div class="field">
-                <input type="text" placeholder="email" Autofocus  class="form-control" formControlName="email" required/>
+                <input type="text" placeholder="Email" Autofocus  class="form-control" formControlName="email" required/>
                 <div class="input-validation-msg">
                   <validation *ngIf="isRequiredField(loginForm.get('email'))" [errMsg]="'Email is Required'"></validation>
                   <validation *ngIf="isValidField(loginForm.get('email'))" [errMsg]="'Enter Valid Email'"></validation>
@@ -30,7 +30,7 @@
 
             <div class="two fields margin-top-10">
               <div class="field">
-                <input type="password" placeholder="password" class="form-control" formControlName="password" required/>
+                <input type="password" placeholder="Password" class="form-control" formControlName="password" required/>
                 <div class="input-validation-msg">
                   <validation *ngIf="isRequiredField(loginForm.get('password'))" [errMsg]="'Password is Required'"></validation>
                 </div>

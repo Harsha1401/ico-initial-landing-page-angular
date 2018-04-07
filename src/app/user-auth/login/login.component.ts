@@ -65,6 +65,7 @@ export class LoginComponent extends BaseComponent implements OnInit {
   onLogin(formParams, isValidForm) {
     if (isValidForm) {
       console.log('User Loged in');
+     // this.sharedService.setLoader(true);
       // this.sharedService.setPass(formParams.password);
       // formParams.password = this.commonFunctions.encryptPassword(formParams.password).toString();
       // this.apiManager.postAPI(API.Login, formParams).subscribe(response=> {
