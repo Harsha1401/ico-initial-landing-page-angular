@@ -3,3 +3,34 @@
     text-align: center;
     width: 100%;
 }
+
+.link--dark {
+    border-color: #00adef;
+    color: #00adef;
+}
+
+.links-container {
+    display: inline-block;
+    margin-top: 2rem;
+}
+.link {
+    font-family: DINNextLTPro-Bold,sans-serif;box-sizing: border-box;
+}
+.link {
+    font-family: arial,sans-serif;
+    font: bold;
+    position: relative;
+    padding-bottom: .25rem;
+    -webkit-transition: border-color .1s linear;
+    -moz-transition: border-color .1s linear;
+    transition: border-color .1s linear;
+    border-bottom: 2px solid;
+    margin: 0px 50px;
+}
+
+.link {
+    font-size: 1.6rem;
+    line-height: 1.25;
+    text-transform: uppercase;
+    text-decoration: none;
+}

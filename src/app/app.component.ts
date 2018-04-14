@@ -63,7 +63,7 @@ export class AppComponent {
           this.headerText.p3=" we appreciate your curiosity.";
           this.headerText.p4="Scroll on down ";
           this.headerText.p5="to find out more.";
-          this.headerText.bgurl="../../../assets/img/ourwork.jpg";
+          this.headerText.bgurl="../../../assets/img/ourwork'.jpg";
         } else{
           this.headerText.heading1="CREATIVE";
           this.headerText.heading2="TECHNOLOGY";
