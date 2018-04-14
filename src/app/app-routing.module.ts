@@ -8,16 +8,7 @@ export const routes: Routes = [
   {
     path: "",
     component: LandingPageComponent,
-  },
-  {
-    path: RouteConstants.NOTFOUND,
-    component: PageNotFoundComponent
-  },
-  {
-    path: '**',
-    redirectTo: RouteConstants.NOTFOUND,
-    pathMatch: 'full',
-  },
+  }
 ];
 
 @NgModule({

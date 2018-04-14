@@ -1,19 +1,19 @@
-<header [ngClass]="headerClass" id="home">
+ <header [ngClass]="headerClass" [ngStyle]="{ 'background': 'linear-gradient(rgba(0, 0, 0,0.7),rgba(0, 0, 0, 0.7)),
+ url('+headerText.bgurl+') no-repeat'}" id="home">
   <div class="container">
       <div class="col-md-12" >
        <app-header-navbar> </app-header-navbar>
       </div>        
-    <div class="contents text-right" *ngIf="showHeader">
-      <h1 class="wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">Box solution for conducting ICOs <b>for 40 BTC</b></h1>
-      <h1 class="wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="400ms">2 weeks for preparation + 1 month for PR campaign</h1>
+    <div class="contents">
+      <h1 class="wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms"><b>{{headerText.heading1}}</b></h1>
+      <h1 class="wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="400ms"><b>{{headerText.heading2}}</b></h1>
+      <h1 class="wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="400ms"><b>{{headerText.heading3}}</b></h1>
       <p class="wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="400ms">
-        ICOBox is the first and the biggest new generation                    
-        <span style="color: #2CD9A2;">Blockchain Growth <br>Promoter</span> and
-        <span style="color: #2CD9A2;">Business Facilitator</span> 
-        for companies seeking to sell their <br>products via ICO crowdsales    
+        {{headerText.p1}}                    
+        <span style="color: #2CD9A2;">{{headerText.p2}} <br>{{headerText.p3}}</span> and
+        <span style="color: #2CD9A2;">{{headerText.p4}}</span> {{headerText.p5}}
       </p>
-      <a href="#why" class="btn btn-lg btn-primary wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">Order Now</a>
-      <a href="#features" class="btn btn-lg btn-border wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="500ms">Read Our Story</a>
+      <a [routerLink]="['/about-us']" class="btn btn-lg btn-border wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="500ms">Read Our Story</a>
     </div>   
   </div>
  </header>

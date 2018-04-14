@@ -1,8 +1,9 @@
 .nv-bar {
-  background-color: #009688;
+  background-color: #3f51b5;
   color: rgba(255,255,255,.84);
   height: 100%;
 }
+
 
 .nv-header {
   padding: 13px 0;
@@ -53,10 +54,15 @@
     -o-transition: all 0.3s ease-in-out;
   }
 
-  li a:hover,
-  li .active a {
+  li a:hover {
   background: rgba(255, 255, 255, 0.1);
   }
+
+  
+  li .active-tab {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
   :host {
     background: #1a2580;
     color: #fff;

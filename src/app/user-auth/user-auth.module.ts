@@ -3,7 +3,6 @@ import {CommonModule} from "@angular/common";
 import {UserAuthRoutingModule} from "./user-auth-routing.module";
 import { RouterLink } from '@angular/router';
 import {RouterModule} from "@angular/router";
-//import {UserAuthService} from "./user-auth.service";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { FooterComponent } from './landing-page/footer/footer.component';
 import {ChartModule, DialogModule, DropdownModule, TooltipModule} from 'primeng/primeng';
@@ -15,17 +14,14 @@ import { ImageGalleryComponent } from "./landing-page/image-gallery/image-galler
 import { ContentDisplayComponent } from "./landing-page/content-display/content-display.component";
 import { ContactUsComponent } from "./landing-page/contact-us/contact-us.component";
 import { HeaderNavbarComponent } from "./header-navbar/header-navbar.component";
-import { LoginComponent } from './login/login.component';
 import { SharedService } from "../utility/shared-service/shared-service";
-import { RegisterUserComponent } from './register-user/register-user.component';
 import { UtilityModule } from "../utility/utility.module";
 import { ToastModule } from "ng2-toastr";
 import { FaqComponent } from './faq/faq.component';
 import { AboutUsComponent } from './about-us/about-us.component';
-import { TokenBuyersComponent } from './token-buyers/token-buyers.component';
-import { ProspectiveIcoComponent } from './prospective-ico/prospective-ico.component';
-//import { CompleteIcoComponent } from './complete-ico/complete-ico.component';
-//import { ImageUploadComponent } from './image-upload/image-upload.component';
+import { ServicesComponent } from './services/services.component';
+import { OurWorkComponent } from './our-work/our-work.component';
+import { ContactUsPageComponent } from "./contact-us-page/contact-us-page.component";
 
 @NgModule({
   imports: [
@@ -44,8 +40,6 @@ import { ProspectiveIcoComponent } from './prospective-ico/prospective-ico.compo
   declarations: [
     FooterComponent,
     LandingPageComponent,
-    //CompleteIcoComponent,
-    //ImageUploadComponent,
     NavigationComponent,
     HeaderComponent,
     FooterComponent,
@@ -54,23 +48,19 @@ import { ProspectiveIcoComponent } from './prospective-ico/prospective-ico.compo
     ContentDisplayComponent,
     ContactUsComponent,
     HeaderNavbarComponent,
-    LoginComponent,
-    RegisterUserComponent,
     FaqComponent,
     AboutUsComponent,
-    TokenBuyersComponent,
-    ProspectiveIcoComponent
+    ServicesComponent,
+    OurWorkComponent,
+    ContactUsPageComponent
   ],
   providers: [
-    //UserAuthService,
     SharedService
   ],
   exports: [
-    LoginComponent,
     HeaderComponent,
     HeaderNavbarComponent,
     FooterComponent,
-    RegisterUserComponent
   ]
 })
 

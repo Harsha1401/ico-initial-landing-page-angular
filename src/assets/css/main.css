@@ -41,10 +41,11 @@ a:focus {
   padding: 90px 0;
 }
 .section-header .section-title {
-  font-size: 38px;
+  font-size: 30px;
   text-transform: uppercase;
-  margin-top: 0;
-  font-weight: 700;
+  margin-top: 0px;
+  font-family: monospace;
+  color: black;
 }
 .section-header .section-subtitle {
   font-size: 14px;
@@ -53,9 +54,9 @@ a:focus {
   margin-top: 0;
 }
 .title-small {
-  font-size: 38px;
-  color: #3f51b5;
-  margin-bottom: 30px;
+  font-size: 50px;
+  color: black;
+  margin-bottom: 20px;
   line-height: 50px;
 }
 .content-wrap {
@@ -81,7 +82,7 @@ a:focus {
   -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown;
   padding: 0!important;
-  background: #009688 !important;
+  background: #3f51b5 !important;
 }
 .sticky-navigation .row {
   padding: 0;
@@ -226,7 +227,6 @@ a:focus {
 
 
 .hero-area {
-  background: url(../img/hero-area.jpg) no-repeat;
   background-size: cover;
   background-position: center bottom;
   color: #fff;
@@ -236,24 +236,28 @@ a:focus {
 .hero-area .sticky-navigation {
   background: transparent;
 }
+.hero-area .contents{
+  margin-left: 12%;
+}
 .hero-area .contents h1 {
-  font-size: 30px;
+  font-size: 50px;
   font-weight: 100;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 .hero-area .contents p {
-  font-size: 16px;
+  font-size: 30px;
   font-weight: 400;
   text-transform: uppercase;
 }
 .hero-area .contents .btn {
-  margin: 15px;
+  margin: 0px;
 }
 @media (min-width: 1200px) {
   .hero-area {
-    padding: 280px 0;
+    padding: 170px 0;
   }
   .hero-area h1 {
-    font-size: 50px !important;
+    font-size: 60px !important;
   }
 }
 #features {
@@ -325,7 +329,7 @@ a:focus {
   color: #fff;
 }
 .main-feature-gray {
-  background: #ecf0f1;
+  background: #fff;;
 }
 #screenshot .section-header {
   margin-bottom: 80px;
@@ -517,7 +521,14 @@ a:focus {
   text-align: center;
 }
 #contact {
-  background: #ecf0f1;
+  background: #fff;
+}
+
+#contact h1 {
+  color: black;
+}
+#contact h2 {
+  color: black;
 }
 #contact .info {
   padding: 15px 0;

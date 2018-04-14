@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { HeaderNavbarComponent } from '../header-navbar/header-navbar.component';
 import { Router } from '@angular/router';
 
@@ -8,18 +8,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  showHeader: boolean=true;
-  headerClass: string="hero-area";
+ 
+  @Input() headerClass : string="hero-area";
+  @Input() headerText:any ={};
+ 
   constructor(router:Router,) {
-    router.events.subscribe((event:any) => {
-      if(event.url == "#/home" || event.url == "/") {
-        this.headerClass = "hero-area";
-        this.showHeader = true;  
-      } else {
-        this.headerClass ="";
-        this.showHeader = false;  
-      }
-    });
+   
   }
 
   ngOnInit() {
