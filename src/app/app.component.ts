@@ -45,7 +45,15 @@ export class AppComponent {
           this.headerText.bgurl="../../../assets/img/contact-us.jpg";
           
         } else if(event.url ==="/services") {
-
+          this.headerText.heading1="";
+          this.headerText.heading2="Our Services";
+          this.headerText.heading3="";
+          this.headerText.p1="We noticed you taking a peek.";
+          this.headerText.p2="Don’t worry,";
+          this.headerText.p3=" we appreciate your curiosity.";
+          this.headerText.p4="Scroll on down ";
+          this.headerText.p5="to find out more.";
+          this.headerText.bgurl="../../../assets/img/our-services.jpg";
         } else if(event.url ==="/our-work"){
           this.headerText.heading1="";
           this.headerText.heading2="OUR WORK";
@@ -55,7 +63,7 @@ export class AppComponent {
           this.headerText.p3=" we appreciate your curiosity.";
           this.headerText.p4="Scroll on down ";
           this.headerText.p5="to find out more.";
-          this.headerText.bgurl="../../../assets/img/about-us.jpg";
+          this.headerText.bgurl="../../../assets/img/ourwork.jpg";
         } else{
           this.headerText.heading1="CREATIVE";
           this.headerText.heading2="TECHNOLOGY";
