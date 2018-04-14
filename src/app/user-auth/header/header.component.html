@@ -1,13 +1,13 @@
  <header [ngClass]="headerClass" [ngStyle]="{ 'background': 'linear-gradient(rgba(0, 0, 0,0.7),rgba(0, 0, 0, 0.7)),
- url('+headerText.bgurl+') no-repeat top center fixed'}" id="home">
+ url('+headerText.bgurl+') no-repeat fixed'}">
   <div class="container">
       <div class="col-md-12" >
        <app-header-navbar> </app-header-navbar>
       </div>        
     <div class="contents">
-      <h1 class="wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms"><b>{{headerText.heading1}}</b></h1>
-      <h1 class="wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="400ms"><b>{{headerText.heading2}}</b></h1>
-      <h1 class="wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="400ms"><b>{{headerText.heading3}}</b></h1>
+      <h1 class="wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms"><b>{{headerText.heading1}}
+          <br>{{headerText.heading2}} <br> {{headerText.heading3}}</b></h1>
+     
       <p class="wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="400ms">
         {{headerText.p1}}                    
         <span style="color: #2CD9A2;">{{headerText.p2}} <br>{{headerText.p3}}</span> and
