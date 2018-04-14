@@ -17,11 +17,11 @@ import { HeaderNavbarComponent } from "./header-navbar/header-navbar.component";
 import { SharedService } from "../utility/shared-service/shared-service";
 import { UtilityModule } from "../utility/utility.module";
 import { ToastModule } from "ng2-toastr";
-import { FaqComponent } from './faq/faq.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ServicesComponent } from './services/services.component';
 import { OurWorkComponent } from './our-work/our-work.component';
 import { ContactUsPageComponent } from "./contact-us-page/contact-us-page.component";
+import { CopyrightsComponent } from './copyrights/copyrights.component';
 
 @NgModule({
   imports: [
@@ -48,11 +48,11 @@ import { ContactUsPageComponent } from "./contact-us-page/contact-us-page.compon
     ContentDisplayComponent,
     ContactUsComponent,
     HeaderNavbarComponent,
-    FaqComponent,
     AboutUsComponent,
     ServicesComponent,
     OurWorkComponent,
-    ContactUsPageComponent
+    ContactUsPageComponent,
+    CopyrightsComponent
   ],
   providers: [
     SharedService
@@ -61,6 +61,7 @@ import { ContactUsPageComponent } from "./contact-us-page/contact-us-page.compon
     HeaderComponent,
     HeaderNavbarComponent,
     FooterComponent,
+    CopyrightsComponent
   ]
 })
 
