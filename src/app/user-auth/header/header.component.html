@@ -1,5 +1,4 @@
- <header [ngClass]="headerClass" [ngStyle]="{ 'background': 'linear-gradient(rgba(0, 0, 0,0.7),rgba(0, 0, 0, 0.7)),
- url('+headerText.bgurl+') no-repeat fixed'}">
+ <header [ngClass]="headerClass" [ngStyle]="getMyStyles()">
   <div class="container">
       <div class="col-md-12" >
        <app-header-navbar> </app-header-navbar>

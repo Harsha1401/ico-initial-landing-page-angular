@@ -19,4 +19,11 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+  getMyStyles() {
+    let myStyles = {
+      'background': 'linear-gradient(rgba(0, 0, 0,0.7),rgba(0, 0, 0, 0.7)),url('+this.headerText.bgurl+') top left / cover no-repeat fixed',
+    };
+    return myStyles;
+}  
+
 }
